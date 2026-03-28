@@ -3,7 +3,7 @@ import React from "react";
 const HeroText = () => {
   return (
     <div>
-      <h1 className="text-(--primaryColor) font-thin text-[2.5rem] leading-[100%] md:text-[80px]">
+      <h1 className="text-[var(--primaryColor)] font-thin text-[2.5rem] leading-[100%] md:text-[80px]">
         Welcome to the <br />
         <span className="font-bold">Frontend Quiz!</span>
       </h1>

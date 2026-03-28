@@ -1,5 +1,4 @@
 import React from "react";
-import { QuizContext } from "../context/QuizProvider";
 
 const OptionBtn = ({
   option,
@@ -28,6 +27,7 @@ const OptionBtn = ({
     <button
       onClick={() => setSelectedOption(option)}
       disabled={isSubmitted}
+      aria-pressed={isSelected}
       className={`
         w-full
         flex items-center gap-4 md:gap-6
@@ -38,6 +38,8 @@ const OptionBtn = ({
         rounded-xl md:rounded-2xl
         shadow-md
         transition-all duration-200
+        focus-visible:outline-none
+        focus-visible:ring-4 focus-visible:ring-purple-300
         hover:scale-[1.02]
         hover:shadow-lg
         hover:border-purple-500

@@ -1,5 +1,5 @@
 import React from "react";
-import { QuizContext } from "../context/QuizProvider";
+import { QuizContext } from "../context/QuizContext";
 import ProgressBar from "../ui/ProgressBar";
 
 const QuizQuestion = () => {
@@ -32,7 +32,10 @@ const QuizQuestion = () => {
 
       {/* PROGRESS BAR */}
       <div className="w-full md:max-w-2xl">
-        <ProgressBar current={currentQuestionIndex} total={questions.length} />
+        <ProgressBar
+          current={currentQuestionIndex + 1}
+          total={questions.length}
+        />
       </div>
     </div>
   );

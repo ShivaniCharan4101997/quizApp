@@ -1,9 +1,8 @@
 import React from "react";
-import { QuizContext } from "../context/QuizProvider";
+import { QuizContext } from "../context/QuizContext";
 import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  const { questions } = React.useContext(QuizContext);
   const { darkMode, toggleTheme, icon, title, iconBg } =
     React.useContext(QuizContext);
   const location = useLocation();
@@ -55,6 +54,7 @@ const Header = () => {
             className="sr-only"
             checked={darkMode}
             onChange={toggleTheme}
+            aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
           />
 
           <label

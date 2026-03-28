@@ -1,6 +1,6 @@
 import React from "react";
 import OptionBtn from "../ui/OptionBtn";
-import { QuizContext } from "../context/QuizProvider";
+import { QuizContext } from "../context/QuizContext";
 import PrimaryBtn from "../ui/PrimaryBtn";
 
 const QuizOptions = () => {
@@ -12,7 +12,6 @@ const QuizOptions = () => {
     selectedOption,
     setSelectedOption,
     setCurrentQuestionIndex,
-    score,
     setScore,
   } = React.useContext(QuizContext);
 
@@ -24,11 +23,8 @@ const QuizOptions = () => {
     setIsSubmitted(true);
 
     if (selectedOption === currentQuestion.answer) {
-      setScore(score + 1);
+      setScore((prev) => prev + 1);
     }
-
-    //  update progress here
-    setProgress((prev) => prev + 1);
   }
 
   function handleNext() {

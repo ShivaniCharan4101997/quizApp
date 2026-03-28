@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import { QuizContext } from "../context/QuizProvider";
+import { QuizContext } from "../context/QuizContext";
 const BigButton = ({ subject }) => {
-  const { setQuizIndex } = React.useContext(QuizContext);
+  const { setQuizIndex, restartQuiz } = React.useContext(QuizContext);
   const navigate = useNavigate();
 
   function handleClick() {
+    restartQuiz();
     setQuizIndex(subject.id - 1);
     navigate(`/quiz/${subject.slug}`);
   }
@@ -14,6 +15,7 @@ const BigButton = ({ subject }) => {
     <button
       onClick={handleClick}
       className="bg-[var(--tabBgColor)] text-[var(--primaryColor)] p-4 mb-2 md:p-[25px] rounded-xl md:rounded-3xl shadow-xl font-bold text-[35px] w-full md:mb-4"
+      aria-label={`Start ${subject.name} quiz`}
     >
       <div className="flex items-center gap-8">
         <div
