@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { QuizContext } from '../context/QuizProvider';
+import React from "react";
+import { QuizContext } from "../context/QuizContext";
 import QuizOptions from "./QuizOptions";
 import QuizQuestion from "./QuizQuestion";
 import QuizCompleted from "./QuizCompleted";
