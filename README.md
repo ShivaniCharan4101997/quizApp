@@ -98,17 +98,17 @@ npm run dev
 Add your screenshots here 👇
 
 ```
-/public/screenshots/home.png
-/public/screenshots/quiz.png
-/public/screenshots/result.png
+../public/screenshots/home.png
+../public/screenshots/quiz.png
+../public/screenshots/result.png
 ```
 
 Then display them:
 
 ```
-![Home](/public/screenshots/home.png)
-![Quiz](/public/screenshots/quiz.png)
-![Result](/public/screenshots/result.png)
+![Home](../public/screenshots/home.png)
+![Quiz](../public/screenshots/quiz.png)
+![Result](../public/screenshots/result.png)
 ```
 
 ---
