@@ -6,7 +6,7 @@ import QuizProvider from "./context/QuizProvider";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[var(--bgColor)] transition-all duration-500">
+    <div className="min-h-screen bg-(--bgColor) transition-all duration-500">
       <div
         className="
       min-h-screen
