@@ -106,9 +106,9 @@ Add your screenshots here 👇
 Then display them:
 
 ```
-![Home](./public/screenshots/home.png)
-![Quiz](./public/screenshots/quiz.png)
-![Result](./public/screenshots/result.png)
+![Home](./public//screenshots/home.png)
+![Quiz](./public//screenshots/quiz.png)
+![Result](./public//screenshots/result.png)
 ```
 
 ---
