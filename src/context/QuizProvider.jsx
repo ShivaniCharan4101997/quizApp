@@ -9,6 +9,7 @@ const getQuizSlug = (title) => {
   }
 
   return title.toLowerCase();
+  ``;
 };
 
 const QuizProvider = ({ children }) => {
@@ -40,7 +41,7 @@ const QuizProvider = ({ children }) => {
   };
 
   React.useEffect(() => {
-    const [, quizRoute, subjectSlug] = location.pathname.split("/");
+    const [quizRoute, subjectSlug] = location.pathname.split("/");
 
     if (quizRoute !== "quiz" || !subjectSlug) {
       return;
@@ -87,7 +88,8 @@ const QuizProvider = ({ children }) => {
         setIsSubmitted,
         score,
         setScore,
-        correctAnswer: currentQuiz.questions[currentQuestionIndex]?.answer ?? "",
+        correctAnswer:
+          currentQuiz.questions[currentQuestionIndex]?.answer ?? "",
         isQuizCompleted: currentQuestionIndex >= currentQuiz.questions.length,
         restartQuiz,
       }}
